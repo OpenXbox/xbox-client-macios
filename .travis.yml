@@ -1,1 +1,9 @@
+language: csharp
+mono: none
+dotnet: 2.2.100
+
 os: osx
+osx_image: xcode9.2
+
+before_build:
+ - sh: nuget restore
