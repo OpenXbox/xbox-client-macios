@@ -60,6 +60,5 @@
     <Compile Include="VideoEngineManager.cs" />
   </ItemGroup>
   <!-- Replace unavailable targets-file on non-OSX --> 
-  <Import Condition="$([MSBuild]::IsOsPlatform('OSX'))" Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
-  <Import Condition="! $([MSBuild]::IsOsPlatform('OSX'))" Project="$(MSBuildExtensionsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
