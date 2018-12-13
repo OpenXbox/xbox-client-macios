@@ -6,11 +6,12 @@ osx_image: xcode9.2
 
 env:
   global:
-    - MONO_VERSION=5.16.0.220
+    - MONO_VERSION=5.16.0
+    - MONO_BUILD=5.16.0.220
 
 install:
-  - wget "http://download.mono-project.com/archive/${MONO_VERSION}/macos-10-universal/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.universal.pkg"
-  - sudo installer -pkg "MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.universal.pkg" -target /
+  - wget "https://download.mono-project.com/archive/${MONO_VERSION}/macos-10-universal/MonoFramework-MDK-${MONO_BUILD}.macos10.xamarin.universal.pkg"
+  - sudo installer -pkg "MonoFramework-MDK-${MONO_BUILD}.macos10.xamarin.universal.pkg" -target /
 
 script:
   - /Library/Frameworks/Mono.framework/Commands/nuget restore
