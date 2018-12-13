@@ -1,10 +1,9 @@
 language: csharp
-mono: none
-dotnet: 2.2.100
+mono: latest
 
 os: osx
 osx_image: xcode9.2
 
 script:
- - nuget restore
- - msbuild
+  - nuget restore
+  - msbuild
